@@ -6,6 +6,11 @@
     --main:rgb(211, 58, 203);
     --dark:rgb(46, 44, 44);
 }
+::selection{
+    color: var(--dark);
+    background-color: aquamarine;
+}
+
 
 body{
     background-color: var(--dark);
@@ -26,9 +31,18 @@ h1{
 h2{
     font-size: 28px;
 }
-section p{
-    font-size: 20px;
-    padding-bottom: 14px;
+/* Sets cards on rows and responsive */
+.row {
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    }
+    /* Make cards into even sections */
+.card{
+    flex:1 1 25%;
+    margin: 25px 25px;
+    padding: 15px;
+    border-radius: 10px;
 }
 /* Bring header to the front and fixed on top of card*/
 .card-header{
@@ -42,28 +56,21 @@ section p{
     margin-bottom: -30px;
     font-weight: 700;
 }
-                
-p{
-    color: var(--main);
-}
 /* Style the cards */
 section{
     padding-left: 10px;
     border: 2px dashed whitesmoke;
 }
-/* Make cards into even sections */
-.card{
-    flex:1 1 25%;
-    margin: 25px 25px;
-    padding: 15px;
-    border-radius: 10px;
+
+p{
+    color: var(--main);
 }
-/* Sets cards on rows and responsive */
-.row {
-    display:flex;
-    flex-direction: row;
-    flex-wrap:wrap;
-    }
+
+section p{
+    font-size: 20px;
+    padding-bottom: 14px;
+}
+
 /* Added background and card style */
 .code-card{
    background-image: linear-gradient(rgba(232, 102, 236, 0.3)0%, rgba(232, 102, 236, 0.6)100%);
@@ -71,6 +78,15 @@ font-size: 18px;
 color: whitesmoke;
 border-radius: 8px;
 line-height:1.5;
+}
+
+pre:active{
+    user-select: all;
+}   
+
+.code-card:hover, .card-header:hover, .card-header-bottom:hover,.card:hover
+ {
+    box-shadow: inset 0px 0px 8px var(--main), 0 0 15px var(--main);
 }
 
 footer{
