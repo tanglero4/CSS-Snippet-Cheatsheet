@@ -1,0 +1,51 @@
+:root{
+    --main:rgb(211, 58, 203);;
+}
+body{
+    background-color: rgb(46, 44, 44);
+    margin-top: 30px;
+    font-family: sans-serif;
+}
+h1{
+    font-size: 40px;
+    color:var(--main);
+}
+h1, p{
+    text-align: center;
+    margin-bottom: 10px;
+}
+.introduction{
+    color: whitesmoke;
+    margin: 40px 40px;
+}
+
+h2 {
+    color:var(--main); 
+    border: 2px solid whitesmoke;
+    border-radius: 10px;
+}
+p{
+    color: var(--main);
+}
+section{
+    padding-left: 30px;
+    border: 1px dashed whitesmoke;
+ margin-bottom: 40px;
+}
+.flex{
+    flex:0 0 30%;
+}
+.row {
+    display:flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    }
+    
+.code-card{
+   background-image: linear-gradient(rgba(232, 102, 236, 0.3)0%, rgba(232, 102, 236, 0.6)100%);
+}
+
+footer{
+    color: var(--main);
+    text-align: center;
+}
